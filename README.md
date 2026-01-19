@@ -9,6 +9,7 @@ A REST API built with Spring Boot that provides similar product recommendations 
 - [Overview](#overview)
 - [Features](#features)
 - [Prerequisites](#prerequisites)
+- [Running the Application](#running)
 
 ---
 
@@ -149,3 +150,23 @@ http GET localhost:5000/product/1/similar
 
 # Using Postman
 GET http://localhost:5000/product/1/similar
+```
+---
+
+## Running
+1. Start the Mock APIs
+   bash
+   docker-compose up -d simulado influxdb grafana
+2. Verify Mocks are Working
+   bash
+   curl http://localhost:3001/product/1/similarids
+   You should get a response like: [2, 3, 4]
+
+3. Start Your Spring Boot Application
+   bash
+   ./mvnw spring-boot:run
+   Or run from your IDE
+
+4. Test Your Endpoint Manually
+   bash
+   curl http://localhost:5000/product/1/similar
