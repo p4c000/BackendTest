@@ -1,10 +1,10 @@
-📘 Similar Products API - README
+Similar Products API - README
 markdown
 # Similar Products API
 
 A REST API built with Spring Boot that provides similar product recommendations by aggregating data other microservices.
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Overview](#overview)
 - [Features](#features)
@@ -23,19 +23,18 @@ The API fetches similar product IDs, then retrieves detailed information for eac
 
 ---
 
-## ✨ Features
-
+## Features
 - RESTful API design
 - Parallel API calls using Spring WebFlux
 - Resilient error handling with graceful degradation
-- Timeout protection (5 seconds per request)
+- Timeout protection (20 seconds per request)
 - Console logging
 - Docker-ready environment
 
 
 ---
 
-## 📦 Prerequisites
+## Prerequisites
 
 - **Java 17** or higher
 - **Maven 3.6+** (or use included wrapper)
